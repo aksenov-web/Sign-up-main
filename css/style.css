@@ -13,6 +13,14 @@ header {
     max-width: 1139px;
     margin: 38px auto 0 auto;
 }
+
+@media screen and (max-width: 786px) {
+  header {
+    width: 786px;
+    background: rgba(0, 0, 0, 0.4);
+
+  }
+}
 #logo {
     display: inline-block;
     color: white;
@@ -108,7 +116,7 @@ header {
     border: none;
     color: lightgray;
     line-height: 22px;
-    text-align: center;
+    text-align: left;
     font-size: 13px;
     border-bottom: 1px solid grey;
     outline: none;
@@ -124,7 +132,7 @@ header {
 footer {
     
     max-width: 1136px;
-    margin: 72px auto 0;
+    margin: 72px auto 20px auto;
     display: flex;
     justify-content: space-between;
 }
