@@ -2,7 +2,9 @@ body {
     background-image: url('../images/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
+
 a {
     text-decoration: none;
     
@@ -12,24 +14,62 @@ header {
     
     max-width: 1139px;
     margin: 38px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#menu-button {
+    display:none;
 }
 
-@media screen and (max-width: 786px) {
-  header {
-    width: 786px;
-    background: rgba(0, 0, 0, 0.4);
 
-  }
-}
+                @media (max-width: 786px) {
+              header {
+                width: auto;
+                padding: 24px;
+                margin: 0 auto;
+                background: rgba(0, 0, 0, 0.4);
+
+              }
+                footer {
+                    width: 786px;
+
+                }
+            #footer-left {
+                width: auto;
+                margin: 0px auto 76px 40px;
+            }
+            #footer-right {
+
+            }
+            }
+
+
+
+    @media (max-width: 500px) {
+      header {
+        width: auto;
+        padding: 24px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.4);
+
+      }
+        #top-menu {
+            display: none;
+        }
+        #menu-button {
+        display:block;
+    }
+    }
+
+
+
 #logo {
     display: inline-block;
     color: white;
     font-size: 18px;
 }
-#top-menu {
-    float: right;
 
-}
+
 .instagram-icon::before {
     content: url('../images/Inst.svg');
 }
@@ -145,9 +185,6 @@ footer a {
     font-size: 12px;
     line-height: 14px;
 }
-#footer-left {
-    
-}
 
 #footer-right {
     margin: 0px;
@@ -155,8 +192,6 @@ footer a {
     font-size: 10px;
     line-height: 11px;
     color: white;
-    
-/* !important
-    */
+
 }
 
