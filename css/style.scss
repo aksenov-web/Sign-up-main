@@ -1,0 +1,232 @@
+/* $ - создание переменных */
+$default_font: Roboto;
+$tablet_width: 786px;
+$mobile_width: 425px;
+$white_color: #FFFFFF;
+
+/* создание стиля с несколькими значениями
+*/
+@mixin default-style {
+    font-family: $default_font;
+    font-style: normal;
+    font-weight: normal;
+}
+@mixin size ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+body {
+    background: {
+        image: url('../images/bg.png');
+        repeat: no-repeat;
+        size: cover;
+    }
+    margin: 0;
+}
+a {
+    text-decoration: none;
+
+}
+
+header {
+    max-width: 1139px;
+    width: auto;
+    margin: 38px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#menu-button {
+    display:none;
+}
+
+
+
+
+
+
+#logo {
+    display: inline-block;
+    color: $white_color;
+    font-size: 18px;
+}
+
+
+.instagram-icon::before {
+    content: url('../images/Inst.svg');
+}
+
+#top-menu {
+    a {
+    @include default-style;
+    font-size: 12px;
+    line-height: 14px;
+    color: $white_color;
+}
+    svg {
+    margin-left: 24px;
+    vertical-align: middle;
+}
+    img {
+    margin-left: 30px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+}
+$block_top_pos: -39px;
+.sign-header {
+    position:relative;
+    top: $block_top_pos;
+    left: 20px;
+    @include size(324px, 150px);
+    /*
+    width: 324px;
+    height: 150px;
+    */
+    background: linear-gradient(90deg, #AB47BC 0%, #7B1FA2 100%);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.12), 0px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+
+    h1 {
+    text-align: center;
+
+    @include default-style;
+    font-size: 20px;
+    line-height: 23px;
+    color: $white_color;
+    padding-top: 31px;
+    }
+}
+.sign-icos {
+
+    margin-top: 36px;
+    text-align: center;
+
+    a {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+}
+.sign-classical {
+    text-align: center;
+    margin-top: 32px+$block_top_pos;
+    margin-bottom: 33px;
+    font-family: $default_font;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+#sign-up {
+    background-color: $white_color;
+    width: 365px;
+    min-height: 509px;
+    margin: 160px auto 0;
+
+    form label {
+    margin-left: 26px;
+    width: 28px;
+}
+
+    form input {
+    width: 269px;
+    margin-left: 11px;
+    padding: 0px;
+    margin-bottom: 46px;
+}
+}
+
+.underline {
+    border: none;
+    color: lightgray;
+    line-height: 22px;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.sub {
+    background: transparent;
+    border: none;
+    color: #9C27B0;
+    display: flex;
+    margin: -2px auto 0 auto;
+}
+footer {
+
+    max-width: 1136px;
+    margin: 72px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+a {
+    color: $white_color;
+    margin-right: 34px;
+    display: inline-block;
+    font-family: $default_font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+}
+#footer-right {
+    margin: 0px;
+    font-family: FontAwesome;
+    font-size: 10px;
+    line-height: 11px;
+    color: $white_color;
+
+}
+           @media (max-width: $tablet_width) {
+              header {
+                width: $tablet_width;
+                padding: 24px;
+                margin: 0px auto;
+                background: rgba(0, 0, 0, 0.4);
+
+              }
+                footer {
+                    width: 471px;
+                    margin: 74px auto 40px 28px;
+                    flex-wrap: wrap;
+                }
+
+            #footer-right {
+                margin: 31px 0px auto auto;
+
+
+            }
+            }
+
+
+
+    @media (max-width: $mobile_width) {
+      header {
+        width: $mobile_width;
+        padding: 24px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.4);
+
+      }
+        #top-menu {
+            display: none;
+        }
+        #menu-button {
+        display:block;
+    }
+        footer {
+                    width: 324px;
+                    margin: 66px auto 29px 28px;
+                    flex-wrap: wrap;
+
+
+                }
+            footer a {
+                margin-right: 20px
+
+            }
+            #footer-right {
+                margin: 31px 20px auto auto;
+        }
+}
