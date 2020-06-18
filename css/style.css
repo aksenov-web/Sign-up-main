@@ -185,9 +185,9 @@ footer a {
 
 
 
-    @media (max-width: 500px) {
+    @media (max-width: 425px) {
       header {
-        width: auto;
+        width: 425px;
         padding: 24px;
         margin: 0 auto;
         background: rgba(0, 0, 0, 0.4);
@@ -199,4 +199,19 @@ footer a {
         #menu-button {
         display:block;
     }
+        footer {
+                    width: 324px;
+                    margin: 66px auto 29px 28px;
+                    flex-wrap: wrap;
+                    align-items: ;
+
+                }
+            footer a {
+                margin-right: 20px
+
+            }
+            #footer-right {
+                margin: 31px 20px auto auto;
+
+
     }
